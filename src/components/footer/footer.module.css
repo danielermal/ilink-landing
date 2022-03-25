@@ -1,0 +1,62 @@
+.footer {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: #F5F5F5;
+    padding: 20px 80px;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    max-width: 1280px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    font-family: 'Factor A TRIAL';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    column-gap: 16px;
+    padding: 0;
+    list-style-type: none;
+}
+
+@media screen and (max-width:1023.98px) {
+    .footer {
+      padding: 0 20px;
+    }
+  }
+
+  @media screen and (max-width: 767.98px) {
+      .footer {
+          padding: 12px 23px 16px;
+      }
+
+      .content {
+          flex-direction: column;
+          row-gap: 12px;
+          justify-content: center;
+      }
+
+      .text {
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+      }
+
+      .icons {
+          margin: 0 auto;
+      }
+  }

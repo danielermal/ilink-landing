@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Factor A TRIAL";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/FactorA-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Factor A TRIAL";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/FactorAMedium-Regular.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Factor A TRIAL";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/FactorA-Bold.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Gilroy-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/Gilroy-Medium.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-style: italic;
+    font-weight: 500;
+    src: url("../fonts/Gilroy-MediumItalic.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/Gilroy-SemiBold.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Gilroy-Bold.woff") format("woff");
+  }
