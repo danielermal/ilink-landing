@@ -43,12 +43,33 @@ export const Feedback = () => {
 
     const [state, setState] = React.useState(false)
 
+    const [offset, setOffset] = React.useState(0)
+
+    const ref = React.useRef(null)
+
     const openModal = () => {
         setState(true)
     }
 
     const closeModal = () => {
         setState(false)
+    }
+
+    const nextElement = () => {
+        setOffset((current) => {
+            const newWidth = current - ref.current.offsetWidth / 2
+            const maxWidth = - ref.current.offsetWidth / 2 * (feedbackList.length - 1)
+            console.log(newWidth);
+            return Math.max(newWidth, maxWidth)
+        })
+    }
+
+    const prevElement = () => {
+        setOffset((current) => {
+            const newWidth = current + ref.current.offsetWidth / 2
+            console.log(newWidth);
+            return Math.min(newWidth, 0)
+        })
     }
 
     const [result, setResult] = React.useState({open: false})
@@ -70,17 +91,19 @@ export const Feedback = () => {
                         </button>
                     </div>
                 </div>
-                <div className={feedback.item} >
-                    {feedbackList.map((item, id) => (
-                        <Item item={item} key={id}  />
-                    ))}
+                <div className={feedback.window}>
+                    <div className={feedback.item} style={{transform: `translateX(${offset}px)`}} ref={ref}>
+                        {feedbackList.map((item, id) => (
+                            <Item item={item} key={id} />
+                        ))}
+                    </div>
                 </div>
             </div>
             <div className={feedback.buttons}>
-                <button type="button" className={feedback.button_swiper}>
+                <button type="button" className={feedback.button_swiper} onClick={prevElement}>
                     <img src={left} alt='left' />
                 </button>
-                <button type="button" className={`${feedback.button_swiper} ${feedback.button_active}`}>
+                <button type="button" className={`${feedback.button_swiper} ${feedback.button_active}`} onClick={nextElement}>
                     <img src={right} alt='right' />
                 </button>
             </div>
